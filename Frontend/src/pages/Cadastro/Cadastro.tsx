@@ -8,8 +8,6 @@ export function Cadastro() {
   const [sobrenome, setSobrenome] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
-  const [senha, setSenha] = useState('');
-  const [confirmarSenha, setConfirmarSenha] = useState('');
   const [erro, setErro] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -18,11 +16,6 @@ export function Cadastro() {
     e.preventDefault();
     setErro('');
 
-    if (senha !== confirmarSenha) {
-      setErro('As senhas não coincidem.');
-      return;
-    }
-
     setLoading(true);
     try {
       await api.post('/clientes', {
@@ -30,7 +23,8 @@ export function Cadastro() {
         contato: telefone,
         descricao: email // usando descricao para email conforme especificado
       });
-      navigate('/login');
+      alert('Dados salvos com sucesso! Vamos marcar seu horário.');
+      navigate('/agendamento');
     } catch (err: any) {
       setErro(err.response?.data?.error || 'Erro ao realizar cadastro.');
     } finally {
@@ -45,7 +39,10 @@ export function Cadastro() {
           <form onSubmit={handleSubmit} style={{ width: '100%' }}>
             <div className={styles['form-header']}>
               <div className={styles.title}>
-                <h1>Cadastre-se</h1>
+                <h1>Seus Dados</h1>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-dark-muted)', marginTop: '8px' }}>
+                  Preencha para facilitar seu agendamento.
+                </p>
               </div>
               <div className={styles['login-button']}>
                 <button type="button" onClick={() => navigate('/login')}>
@@ -103,29 +100,6 @@ export function Cadastro() {
                 />
               </div>
 
-              <div className={styles['input-box']}>
-                <label htmlFor="password">Senha:</label>
-                <input
-                  id="password"
-                  type="password"
-                  placeholder="Digite uma senha"
-                  value={senha}
-                  onChange={e => setSenha(e.target.value)}
-                  required
-                />
-              </div>
-
-              <div className={styles['input-box']}>
-                <label htmlFor="confirmPassword">Confirmar senha:</label>
-                <input
-                  id="confirmPassword"
-                  type="password"
-                  placeholder="Digite novamente a senha"
-                  value={confirmarSenha}
-                  onChange={e => setConfirmarSenha(e.target.value)}
-                  required
-                />
-              </div>
             </div>
 
             {erro && (
@@ -136,7 +110,7 @@ export function Cadastro() {
 
             <div className={styles['continue-button']}>
               <button type="submit" disabled={loading}>
-                {loading ? 'Cadastrando...' : 'Continuar'}
+                {loading ? 'Salvando...' : 'Salvar e Ir para Agendamento'}
               </button>
             </div>
           </form>

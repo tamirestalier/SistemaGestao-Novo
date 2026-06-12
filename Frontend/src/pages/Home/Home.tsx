@@ -12,8 +12,6 @@ export function Home() {
             <p className={styles['hero-subtitle']}>Beleza com arte. Cuidado com excelência.</p>
             <div className={styles['hero-line']}></div>
             <div className={styles['hero-buttons']}>
-              <Link to="/agendamento" className={styles['btn-outline-white']}>Agendar Agora</Link>
-              <Link to="/servicos" className={styles['btn-outline-gold']}>Ver Serviços</Link>
             </div>
           </div>
         </section>
@@ -109,7 +107,7 @@ export function Home() {
         <div className={styles['footer-grid']}>
           <div className={styles['footer-col']}>
             <h3>Sebastian Cabelo e Estética</h3>
-            <p>📍 Rua das Flores, 123 - Centro, São Paulo</p>
+            <p>📍 Rua Jesuíno dos Santos, 145 - Jaú, São Paulo</p>
             <p>📞 (11) 98765-4321</p>
             <p>🕒 Seg a Sáb: 09h às 20h</p>
           </div>

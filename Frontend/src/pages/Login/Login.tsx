@@ -32,8 +32,13 @@ export function Login() {
     <div className={`${styles.body1} page-bg-image`}>
       <div className={styles.wrapper}>
         <form onSubmit={handleSubmit}>
-          <h1>Login</h1>
-
+          <div style={{ textAlign: 'center', marginBottom: '25px' }}>
+            <h1>Login da Equipe</h1>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-dark-muted)', marginTop: '8px' }}>
+              Acesso exclusivo para <b>Gerentes</b> e <b>Funcionários</b>.
+              <br />Clientes não precisam de conta para agendar serviços.
+            </p>
+          </div>
           <div className={styles['input-box']}>
             <input
               type="email"
@@ -70,7 +75,7 @@ export function Login() {
           </button>
 
           <div className={styles['register-link']}>
-            <p>Não tem uma conta? <Link to="/cadastro">Cadastre-se</Link></p>
+            <p>Não tem uma conta? <Link to="/cadastro-funcionario">Cadastre-se</Link></p>
           </div>
         </form>
       </div>

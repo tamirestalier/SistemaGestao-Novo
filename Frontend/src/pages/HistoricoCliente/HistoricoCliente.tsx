@@ -29,6 +29,7 @@ export function HistoricoCliente() {
   const [cliente, setCliente] = useState<Cliente | null>(null);
   const [historico, setHistorico] = useState<Historico[]>([]);
   const [modalAberto, setModalAberto] = useState(false);
+  const [editandoId, setEditandoId] = useState<number | null>(null);
   const [erro, setErro] = useState('');
 
   const [formData, setFormData] = useState<Partial<Historico>>({});
@@ -36,22 +37,53 @@ export function HistoricoCliente() {
   async function pesquisar() {
     try {
       setErro('');
-      // Mock de pesquisa local
+      setCliente(null);
+      setHistorico([]); // Limpa estados anteriores antes de iniciar uma nova busca
+
+      // 1. Busca a lista geral de clientes no backend
       const { data } = await api.get('/clientes');
+      
       const c = data.find((x: Cliente) => 
         x.nome.toLowerCase().includes(pesquisa.toLowerCase()) || 
         x.contato.includes(pesquisa)
       );
+
       if (c) {
         setCliente(c);
-        const resHist = await api.get(`/historico/${c.id}`);
-        setHistorico(resHist.data);
+        
+        // 2. Tenta buscar o histórico de forma isolada para não quebrar o perfil do cliente
+        try {
+          const resHist = await api.get(`/historico/${c.id}`);
+          setHistorico(resHist.data);
+        } catch (histErr) {
+          console.error("Erro ao carregar o histórico do cliente:", histErr);
+          setErro('Cliente encontrado, mas houve um erro ao carregar o histórico.');
+        }
+
       } else {
-        setCliente(null);
         setErro('Cliente não encontrado.');
       }
     } catch (err) {
+      console.error("Erro ao conectar com o servidor/buscar clientes:", err);
       setErro('Erro na busca.');
+    }
+  }
+
+  function handleEdit(hist: Historico) {
+    setEditandoId(hist.id ?? null);
+    setFormData({ ...hist });
+    setModalAberto(true);
+  }
+
+  async function handleDelete(id: number) {
+    if (!window.confirm('Tem certeza que deseja excluir este registro?')) return;
+    if (!cliente) return;
+    try {
+      await api.delete(`/historico/${id}`);
+      const resHist = await api.get(`/historico/${cliente.id}`);
+      setHistorico(resHist.data);
+    } catch (err) {
+      alert('Erro ao excluir registro.');
     }
   }
 
@@ -59,14 +91,22 @@ export function HistoricoCliente() {
     e.preventDefault();
     if (!cliente) return;
     try {
-      await api.post('/historico', {
+      const body = {
         cliente_id: cliente.id,
         ...formData,
         tempo_pausa: formData.tempo_pausa ? Number(formData.tempo_pausa) : undefined
-      });
+      };
+
+      if (editandoId) {
+        await api.put(`/historico/${editandoId}`, body);
+      } else {
+        await api.post('/historico', body);
+      }
+
       setModalAberto(false);
+      setEditandoId(null);
       setFormData({});
-      // Recarrega
+      
       const resHist = await api.get(`/historico/${cliente.id}`);
       setHistorico(resHist.data);
     } catch (err) {
@@ -101,7 +141,7 @@ export function HistoricoCliente() {
               <p><strong>Dermatite/Alergias:</strong> <span className={styles.alerta}>{cliente.descricao || 'Nenhuma'}</span></p>
             </div>
             <div className={styles['perfil-acoes']}>
-              <button className={styles['btn-novo']} onClick={() => setModalAberto(true)}>+ Novo Registro</button>
+              <button className={styles['btn-novo']} onClick={() => { setEditandoId(null); setFormData({}); setModalAberto(true); }}>+ Novo Registro</button>
             </div>
           </div>
         )}
@@ -122,8 +162,8 @@ export function HistoricoCliente() {
               <div className={styles['card-header']}>
                 <span className={styles['data-servico']}>{new Date(h.data_atendimento).toLocaleDateString()}</span>
                 <div className={styles['acoes-card']}>
-                  <button className={styles['btn-editar']}>Editar</button>
-                  <button className={styles['btn-excluir']}>Excluir</button>
+                  <button className={styles['btn-editar']} onClick={() => handleEdit(h)}>Editar</button>
+                  <button className={styles['btn-excluir']} onClick={() => handleDelete(h.id!)}>Excluir</button>
                 </div>
               </div>
               <div className={styles['card-body']}>
@@ -147,8 +187,8 @@ export function HistoricoCliente() {
         <div className={styles.modal} style={{ display: 'flex' }}>
           <div className={styles['modal-content']}>
             <div className={styles['modal-header']}>
-              <h3>Novo Registro de Atendimento</h3>
-              <span className={styles['close-modal']} onClick={() => setModalAberto(false)}>&times;</span>
+              <h3>{editandoId ? 'Editar Registro' : 'Novo Registro de Atendimento'}</h3>
+              <span className={styles['close-modal']} onClick={() => { setModalAberto(false); setEditandoId(null); setFormData({}); }}>&times;</span>
             </div>
             
             <form onSubmit={salvarRegistro}>
@@ -201,7 +241,7 @@ export function HistoricoCliente() {
               </div>
 
               <div className={styles['modal-footer']}>
-                <button type="button" className={styles['btn-cancelar']} onClick={() => setModalAberto(false)}>Cancelar</button>
+                <button type="button" className={styles['btn-cancelar']} onClick={() => { setModalAberto(false); setEditandoId(null); setFormData({}); }}>Cancelar</button>
                 <button type="submit" className={styles['btn-salvar']}>Salvar Registro</button>
               </div>
             </form>

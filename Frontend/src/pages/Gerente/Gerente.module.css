@@ -137,3 +137,115 @@
   border-color: #D4AF37;
   transform: translateY(-2px);
 }
+
+/* ─── Gráficos ─── */
+.graficosSection {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 24px;
+}
+
+.sectionTitle {
+  color: #e2e8f0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.graficosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.graficoCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.graficoTitulo {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.graficoDesc {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.interpretacao {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* ─── Estatísticas ─── */
+.estatisticasSection {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.tabelaWrapper {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+.tabela th {
+  background: rgba(212, 175, 55, 0.15);
+  color: #D4AF37;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tabela td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #e2e8f0;
+  vertical-align: top;
+}
+
+.tabela tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.interpretacaoCell {
+  color: #94a3b8 !important;
+  font-size: 0.85rem;
+  max-width: 350px;
+}
+
+.cvDestaque {
+  margin-top: 16px;
+  padding: 16px 20px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

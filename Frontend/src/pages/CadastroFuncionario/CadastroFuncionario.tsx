@@ -8,6 +8,7 @@ export function CadastroFuncionario() {
   const [areaAtuacao, setAreaAtuacao] = useState('');
   const [emailContato, setEmailContato] = useState('');
   const [telefone, setTelefone] = useState('');
+  const [senha, setSenha] = useState('');
   const [dataNascimento, setDataNascimento] = useState('');
   const [observacoes, setObservacoes] = useState('');
   const [erro, setErro] = useState('');
@@ -23,7 +24,10 @@ export function CadastroFuncionario() {
         nome: nomeCompleto,
         funcao: areaAtuacao,
         contato: telefone,
-        email: emailContato
+        email: emailContato,
+        senha: senha,
+        dataNascimento: dataNascimento,
+        observacoes: observacoes
       });
       setSucesso(true);
       setNomeCompleto('');
@@ -94,6 +98,19 @@ export function CadastroFuncionario() {
                 value={emailContato}
                 onChange={e => setEmailContato(e.target.value)}
                 required 
+              />
+            </div>
+
+            <div className={styles['input-box']}>
+              <label htmlFor="senha">Senha *</label>
+              <input 
+                id="senha" 
+                type="password" 
+                placeholder="Digite uma senha"
+                value={senha}
+                onChange={e => setSenha(e.target.value)}
+                required 
+                minLength={6}
               />
             </div>
 

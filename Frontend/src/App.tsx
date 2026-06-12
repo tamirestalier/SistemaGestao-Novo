@@ -11,7 +11,9 @@ import { Agenda }               from './pages/Agenda/Agenda';
 import { HistoricoCliente }     from './pages/HistoricoCliente/HistoricoCliente';
 import { CadastroFuncionario }  from './pages/CadastroFuncionario/CadastroFuncionario';
 import { Estoque }              from './pages/Estoque/Estoque';
+import { Vendas }               from './pages/Vendas/Vendas';
 import { Gerente }              from './pages/Gerente/Gerente';
+import { Equipe }               from './pages/Equipe/Equipe';
 
 export default function App() {
   return (
@@ -33,6 +35,9 @@ export default function App() {
           <Route path="/agenda" element={
             <ProtectedRoute><Agenda /></ProtectedRoute>
           } />
+          <Route path="/vendas" element={
+            <ProtectedRoute><Vendas /></ProtectedRoute>
+          } />
           <Route path="/historico-cliente" element={
             <ProtectedRoute><HistoricoCliente /></ProtectedRoute>
           } />
@@ -40,6 +45,9 @@ export default function App() {
           {/* Requerem gerente */}
           <Route path="/cadastro-funcionario" element={
             <ProtectedRoute requireGerente><CadastroFuncionario /></ProtectedRoute>
+          } />
+          <Route path="/equipe" element={
+            <ProtectedRoute requireGerente><Equipe /></ProtectedRoute>
           } />
           <Route path="/estoque" element={
             <ProtectedRoute requireGerente><Estoque /></ProtectedRoute>

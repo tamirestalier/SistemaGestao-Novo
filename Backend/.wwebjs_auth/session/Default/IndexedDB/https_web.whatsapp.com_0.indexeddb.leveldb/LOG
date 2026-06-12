@@ -1,0 +1,130 @@
+2026/06/11-09:12:39.035 a50 Reusing MANIFEST C:\Users\Tamires\OneDrive\Área de Trabalho\SistemaGestao-Novo\Backend\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/11-09:12:39.037 a50 Recovering log #1217
+2026/06/11-09:12:39.126 a50 Reusing old log C:\Users\Tamires\OneDrive\Área de Trabalho\SistemaGestao-Novo\Backend\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001217.log 
+2026/06/11-09:15:09.683 a50 Level-0 table #1247: started
+2026/06/11-09:15:09.753 a50 Level-0 table #1247: 1443582 bytes OK
+2026/06/11-09:15:09.755 a50 Delete type=0 #1217
+2026/06/11-09:15:18.645 a50 Compacting 1@0 + 0@1 files
+2026/06/11-09:15:18.685 a50 Generated table #1248@0: 13317 keys, 300798 bytes
+2026/06/11-09:15:18.695 a50 Generated table #1249@0: 693 keys, 92664 bytes
+2026/06/11-09:15:18.707 a50 Generated table #1250@0: 687 keys, 116404 bytes
+2026/06/11-09:15:18.707 a50 Compacted 1@0 + 0@1 files => 509866 bytes
+2026/06/11-09:15:18.709 a50 compacted to: files[ 0 3 24 0 0 0 0 ]
+2026/06/11-09:15:18.711 a50 Delete type=2 #1247
+2026/06/11-09:15:44.564 a50 Compacting 1@1 + 11@2 files
+2026/06/11-09:15:44.647 a50 Generated table #1251@1: 7187 keys, 2128442 bytes
+2026/06/11-09:15:44.850 a50 Generated table #1252@1: 34057 keys, 2164293 bytes
+2026/06/11-09:15:45.055 a50 Generated table #1253@1: 102260 keys, 2253152 bytes
+2026/06/11-09:15:45.222 a50 Generated table #1254@1: 97972 keys, 2248242 bytes
+2026/06/11-09:15:45.481 a50 Generated table #1255@1: 98317 keys, 2248032 bytes
+2026/06/11-09:15:45.759 a50 Generated table #1256@1: 96924 keys, 2245909 bytes
+2026/06/11-09:15:45.997 a50 Generated table #1257@1: 83483 keys, 2231945 bytes
+2026/06/11-09:15:46.181 a50 Generated table #1258@1: 57235 keys, 2286447 bytes
+2026/06/11-09:15:46.235 a50 Generated table #1259@1: 1409 keys, 2136136 bytes
+2026/06/11-09:15:46.312 a50 Generated table #1260@1: 1282 keys, 1739190 bytes
+2026/06/11-09:15:46.312 a50 Compacted 1@1 + 11@2 files => 21681788 bytes
+2026/06/11-09:15:46.313 a50 compacted to: files[ 0 2 23 0 0 0 0 ]
+2026/06/11-09:15:46.314 a50 Delete type=2 #1205
+2026/06/11-09:15:46.314 a50 Delete type=2 #1235
+2026/06/11-09:15:46.314 a50 Delete type=2 #1236
+2026/06/11-09:15:46.314 a50 Delete type=2 #1237
+2026/06/11-09:15:46.315 a50 Delete type=2 #1238
+2026/06/11-09:15:46.315 a50 Delete type=2 #1239
+2026/06/11-09:15:46.315 a50 Delete type=2 #1240
+2026/06/11-09:15:46.315 a50 Delete type=2 #1241
+2026/06/11-09:15:46.315 a50 Delete type=2 #1242
+2026/06/11-09:15:46.315 a50 Delete type=2 #1243
+2026/06/11-09:15:46.315 a50 Delete type=2 #1244
+2026/06/11-09:15:46.315 a50 Delete type=2 #1248
+2026/06/11-09:15:47.713 a50 Compacting 1@1 + 10@2 files
+2026/06/11-09:15:47.801 a50 Generated table #1261@1: 1662 keys, 2148518 bytes
+2026/06/11-09:15:47.841 a50 Generated table #1262@1: 2178 keys, 2151320 bytes
+2026/06/11-09:15:47.891 a50 Generated table #1263@1: 2537 keys, 2149419 bytes
+2026/06/11-09:15:47.935 a50 Generated table #1264@1: 2110 keys, 2153455 bytes
+2026/06/11-09:15:47.984 a50 Generated table #1265@1: 2138 keys, 2147643 bytes
+2026/06/11-09:15:48.033 a50 Generated table #1266@1: 2462 keys, 2152532 bytes
+2026/06/11-09:15:48.087 a50 Generated table #1267@1: 2478 keys, 2150006 bytes
+2026/06/11-09:15:48.221 a50 Generated table #1268@1: 32842 keys, 2250427 bytes
+2026/06/11-09:15:48.341 a50 Generated table #1269@1: 25888 keys, 2275311 bytes
+2026/06/11-09:15:48.448 a50 Generated table #1270@1: 25495 keys, 2267098 bytes
+2026/06/11-09:15:48.450 a50 Generated table #1271@1: 13 keys, 2851 bytes
+2026/06/11-09:15:48.450 a50 Compacted 1@1 + 10@2 files => 21848580 bytes
+2026/06/11-09:15:48.451 a50 compacted to: files[ 0 1 24 0 0 0 0 ]
+2026/06/11-09:15:48.452 a50 Delete type=2 #1222
+2026/06/11-09:15:48.452 a50 Delete type=2 #1223
+2026/06/11-09:15:48.452 a50 Delete type=2 #1224
+2026/06/11-09:15:48.452 a50 Delete type=2 #1225
+2026/06/11-09:15:48.452 a50 Delete type=2 #1226
+2026/06/11-09:15:48.452 a50 Delete type=2 #1227
+2026/06/11-09:15:48.452 a50 Delete type=2 #1228
+2026/06/11-09:15:48.452 a50 Delete type=2 #1229
+2026/06/11-09:15:48.453 a50 Delete type=2 #1230
+2026/06/11-09:15:48.453 a50 Delete type=2 #1231
+2026/06/11-09:15:48.453 a50 Delete type=2 #1249
+2026/06/11-09:16:56.316 a50 Compacting 1@1 + 2@2 files
+2026/06/11-09:16:56.486 a50 Generated table #1272@1: 17747 keys, 2272280 bytes
+2026/06/11-09:16:56.545 a50 Generated table #1273@1: 17503 keys, 1962643 bytes
+2026/06/11-09:16:56.545 a50 Compacted 1@1 + 2@2 files => 4234923 bytes
+2026/06/11-09:16:56.546 a50 compacted to: files[ 0 0 24 0 0 0 0 ]
+2026/06/11-09:16:56.546 a50 Delete type=2 #1233
+2026/06/11-09:16:56.546 a50 Delete type=2 #1234
+2026/06/11-09:16:56.546 a50 Delete type=2 #1250
+2026/06/11-09:59:16.542 a50 Level-0 table #1275: started
+2026/06/11-09:59:16.624 a50 Level-0 table #1275: 1957534 bytes OK
+2026/06/11-09:59:16.628 a50 Delete type=0 #1246
+2026/06/11-09:59:16.654 a50 Compacting 1@0 + 0@1 files
+2026/06/11-09:59:16.709 a50 Generated table #1276@0: 13931 keys, 268802 bytes
+2026/06/11-09:59:16.719 a50 Generated table #1277@0: 753 keys, 122932 bytes
+2026/06/11-09:59:16.724 a50 Generated table #1278@0: 352 keys, 115406 bytes
+2026/06/11-09:59:16.724 a50 Compacted 1@0 + 0@1 files => 507140 bytes
+2026/06/11-09:59:16.725 a50 compacted to: files[ 0 3 24 0 0 0 0 ]
+2026/06/11-09:59:16.725 a50 Delete type=2 #1275
+2026/06/11-09:59:16.753 a50 Compacting 1@1 + 10@2 files
+2026/06/11-09:59:16.879 a50 Generated table #1279@1: 10456 keys, 2131326 bytes
+2026/06/11-09:59:17.042 a50 Generated table #1280@1: 29452 keys, 2158188 bytes
+2026/06/11-09:59:17.279 a50 Generated table #1281@1: 102807 keys, 2253639 bytes
+2026/06/11-09:59:17.564 a50 Generated table #1282@1: 98157 keys, 2246900 bytes
+2026/06/11-09:59:17.722 a50 Generated table #1283@1: 98305 keys, 2247155 bytes
+2026/06/11-09:59:18.093 a50 Generated table #1284@1: 96880 keys, 2246600 bytes
+2026/06/11-09:59:18.285 a50 Generated table #1285@1: 83360 keys, 2232601 bytes
+2026/06/11-09:59:18.436 a50 Generated table #1286@1: 59146 keys, 2289739 bytes
+2026/06/11-09:59:18.475 a50 Generated table #1287@1: 1370 keys, 2134068 bytes
+2026/06/11-09:59:18.558 a50 Generated table #1288@1: 1333 keys, 1799422 bytes
+2026/06/11-09:59:18.558 a50 Compacted 1@1 + 10@2 files => 21739638 bytes
+2026/06/11-09:59:18.560 a50 compacted to: files[ 0 2 24 0 0 0 0 ]
+2026/06/11-09:59:18.561 a50 Delete type=2 #1251
+2026/06/11-09:59:18.561 a50 Delete type=2 #1252
+2026/06/11-09:59:18.562 a50 Delete type=2 #1253
+2026/06/11-09:59:18.562 a50 Delete type=2 #1254
+2026/06/11-09:59:18.562 a50 Delete type=2 #1255
+2026/06/11-09:59:18.562 a50 Delete type=2 #1256
+2026/06/11-09:59:18.562 a50 Delete type=2 #1257
+2026/06/11-09:59:18.563 a50 Delete type=2 #1258
+2026/06/11-09:59:18.563 a50 Delete type=2 #1259
+2026/06/11-09:59:18.563 a50 Delete type=2 #1260
+2026/06/11-09:59:18.563 a50 Delete type=2 #1276
+2026/06/11-10:01:50.733 a50 Compacting 1@1 + 10@2 files
+2026/06/11-10:01:50.855 a50 Generated table #1289@1: 1660 keys, 2149771 bytes
+2026/06/11-10:01:50.911 a50 Generated table #1290@1: 2176 keys, 2151290 bytes
+2026/06/11-10:01:50.993 a50 Generated table #1291@1: 2518 keys, 2149391 bytes
+2026/06/11-10:01:51.045 a50 Generated table #1292@1: 2135 keys, 2155034 bytes
+2026/06/11-10:01:51.092 a50 Generated table #1293@1: 2134 keys, 2147450 bytes
+2026/06/11-10:01:51.149 a50 Generated table #1294@1: 2453 keys, 2149676 bytes
+2026/06/11-10:01:51.188 a50 Generated table #1295@1: 2466 keys, 2148324 bytes
+2026/06/11-10:01:51.346 a50 Generated table #1296@1: 32332 keys, 2247835 bytes
+2026/06/11-10:01:51.499 a50 Generated table #1297@1: 25824 keys, 2275000 bytes
+2026/06/11-10:01:51.623 a50 Generated table #1298@1: 26039 keys, 2269642 bytes
+2026/06/11-10:01:51.627 a50 Generated table #1299@1: 323 keys, 60404 bytes
+2026/06/11-10:01:51.627 a50 Compacted 1@1 + 10@2 files => 21903817 bytes
+2026/06/11-10:01:51.628 a50 compacted to: files[ 0 1 25 0 0 0 0 ]
+2026/06/11-10:01:51.629 a50 Delete type=2 #1261
+2026/06/11-10:01:51.629 a50 Delete type=2 #1262
+2026/06/11-10:01:51.629 a50 Delete type=2 #1263
+2026/06/11-10:01:51.629 a50 Delete type=2 #1264
+2026/06/11-10:01:51.629 a50 Delete type=2 #1265
+2026/06/11-10:01:51.629 a50 Delete type=2 #1266
+2026/06/11-10:01:51.630 a50 Delete type=2 #1267
+2026/06/11-10:01:51.630 a50 Delete type=2 #1268
+2026/06/11-10:01:51.630 a50 Delete type=2 #1269
+2026/06/11-10:01:51.631 a50 Delete type=2 #1270
+2026/06/11-10:01:51.631 a50 Delete type=2 #1277

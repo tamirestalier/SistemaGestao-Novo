@@ -1,4 +1,3 @@
-/* Container principal e fundo compatível */
 .historico-main {
     display: flex;
     justify-content: center;
@@ -12,29 +11,31 @@
 .historico-container {
     width: 95%;
     max-width: 1000px;
-    background-color: rgba(247, 247, 247, 0.98); /* Fundo claro para área produtiva */
+    background-color: rgba(15, 15, 15, 0.95);
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     gap: 25px;
+    color: #eee;
 }
 
-/* Header de busca */
 .historico-header {
-    border-bottom: 2px solid #584fff;
+    border-bottom: 2px solid #D4AF37;
     padding-bottom: 20px;
 }
 
 .historico-header h2 {
-    color: #1a1a1a;
+    color: #f1f1f1;
     font-size: 1.8rem;
     margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .historico-header p {
-    color: #ff4c4c;
+    color: #e74c3c;
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 20px;
@@ -49,20 +50,27 @@
 .search-box input {
     flex: 1;
     padding: 12px 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-radius: 6px;
     font-size: 1rem;
     outline: none;
+    background: #0f0f0f;
+    color: #eee;
+    transition: 0.3s;
 }
 
 .search-box input:focus {
-    border-color: #584fff;
-    box-shadow: 0 0 5px rgba(88, 79, 255, 0.3);
+    border-color: #00c6ff;
+    box-shadow: 0 0 5px rgba(0, 198, 255, 0.3);
 }
 
-.btn-pesquisar, .btn-novo, .btn-salvar {
-    background-color: #584fff;
-    color: #fff;
+.search-box input::placeholder {
+    color: #888;
+}
+
+.btn-pesquisar {
+    background-color: #00c6ff;
+    color: #000;
     border: none;
     padding: 10px 20px;
     border-radius: 6px;
@@ -72,14 +80,46 @@
     transition: 0.3s;
 }
 
-.btn-pesquisar:hover, .btn-novo:hover, .btn-salvar:hover {
-    background-color: #463bdf;
+.btn-pesquisar:hover {
+    background-color: #00a8d6;
+}
+
+.btn-novo {
+    background-color: #2ECC71;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-novo:hover {
+    background-color: #27ae60;
+}
+
+.btn-salvar {
+    background-color: #D4AF37;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-salvar:hover {
+    background-color: #c9a032;
 }
 
 .btn-cancelar {
-    background-color: #ff6363;
-    color: #fff;
-    border: none;
+    background: transparent;
+    border: 1px solid #888;
+    color: #888;
     padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
@@ -87,31 +127,41 @@
     font-size: 1rem;
     transition: 0.3s;
 }
+
 .btn-cancelar:hover {
-    background-color: #d94a4a;
+    background: #333;
+    color: #fff;
 }
 
-/* Perfil do cliente após pesquisa */
 .perfil-cliente {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: #1a1a1a;
     padding: 20px;
-    border-left: 5px solid #2ecc71;
+    border-left: 5px solid #2ECC71;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #333;
 }
 
 .perfil-info h3 {
     margin-bottom: 8px;
-    color: #333;
+    color: #00c6ff;
+    font-size: 1.3rem;
 }
 
 .perfil-info p {
     font-size: 0.95rem;
-    color: #555;
+    color: #ccc;
     margin-bottom: 4px;
+}
+
+.perfil-info p strong {
+    color: #aaa;
+}
+
+.perfil-info p span {
+    color: #fff;
 }
 
 .perfil-info .alerta {
@@ -119,7 +169,6 @@
     font-weight: bold;
 }
 
-/* Cards de histórico */
 .historico-feed {
     display: flex;
     flex-direction: column;
@@ -127,25 +176,34 @@
 }
 
 .historico-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
     border-radius: 8px;
     padding: 20px;
     position: relative;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    transition: border-color 0.3s;
+}
+
+.historico-card:hover {
+    border-color: #555;
+}
+
+.placeholder-card {
+    background-color: #1a1a1a;
+    border: 1px dashed #444;
 }
 
 .historico-card .card-header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #333;
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
 
 .card-header .data-servico {
     font-weight: bold;
-    color: #584fff;
+    color: #D4AF37;
     font-size: 1.1rem;
 }
 
@@ -159,55 +217,77 @@
     border: none;
     cursor: pointer;
     font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn-editar { color: #3498db; }
-.btn-excluir { color: #e74c3c; }
+.btn-editar {
+    color: #00c6ff;
+}
+
+.btn-editar:hover {
+    color: #00a8d6;
+    text-decoration: underline;
+}
+
+.btn-excluir {
+    color: #e74c3c;
+}
+
+.btn-excluir:hover {
+    color: #c0392b;
+    text-decoration: underline;
+}
 
 .card-body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
     font-size: 0.9rem;
-    color: #444;
+    color: #ccc;
 }
 
 .card-body p strong {
-    color: #222;
+    color: #aaa;
+}
+
+.card-body p {
+    color: #ddd;
 }
 
 .observacao-box {
     grid-column: 1 / -1;
-    background-color: #fcfcfc;
-    border-left: 4px solid #f39c12;
+    background-color: #0f0f0f;
+    border-left: 4px solid #D4AF37;
     padding: 10px;
     margin-top: 10px;
     border-radius: 4px;
+    color: #eee;
 }
 
-/* MODAL / FORMULÁRIO SOBREPOSTO */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.6); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.75);
+    backdrop-filter: blur(8px);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    border-radius: 8px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
     padding: 30px;
     width: 90%;
     max-width: 800px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-    /* animação leve */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     animation: fadeIn 0.3s;
 }
 
@@ -220,20 +300,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #333;
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
+.modal-header h3 {
+    color: #f1f1f1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .close-modal {
-    color: #aaa;
+    color: #888;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .close-modal:hover {
-    color: #333;
+    color: #e74c3c;
 }
 
 .form-grid {
@@ -254,20 +341,36 @@
 .form-group label {
     font-size: 0.85rem;
     font-weight: bold;
-    color: #333;
+    color: #aaa;
     margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .form-group input, .form-group textarea {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     border-radius: 5px;
     outline: none;
     font-size: 0.95rem;
+    background: #0f0f0f;
+    color: #eee;
+    transition: 0.3s;
 }
 
 .form-group input:focus, .form-group textarea:focus {
-    border-color: #584fff;
+    border-color: #00c6ff;
+    box-shadow: 0 0 5px rgba(0, 198, 255, 0.3);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+textarea {
+    resize: vertical;
+    font-family: inherit;
 }
 
 .modal-footer {
@@ -275,11 +378,10 @@
     justify-content: flex-end;
     gap: 15px;
     margin-top: 25px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #333;
     padding-top: 20px;
 }
 
-/* Responsividade do modal e geral */
 @media screen and (max-width: 1024px) {
     .historico-container { padding: 20px; }
     .form-grid { grid-template-columns: repeat(2, 1fr); }
@@ -310,11 +412,11 @@
 
 @media screen and (max-width: 480px) {
     .historico-container { padding: 10px; }
-    .modal-content { 
-        width: 95%; 
-        padding: 15px; 
-        max-height: 85vh; 
-        overflow-y: auto; 
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+        max-height: 85vh;
+        overflow-y: auto;
     }
     .modal-footer button { min-height: 44px; }
 

@@ -19,13 +19,19 @@ interface AuthContextType {
 export const AuthContext = createContext<AuthContextType>({} as AuthContextType);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser]   = useState<User | null>(null);
-  const [token, setToken] = useState<string | null>(null);
+  const [user, setUser]   = useState<User | null>(() => {
+    const storedUser = localStorage.getItem('user');
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
+  const [token, setToken] = useState<string | null>(() => {
+    return localStorage.getItem('token');
+  });
 
+  // useEffect not strictly needed anymore for initial load, but we can keep it if we want to sync
   useEffect(() => {
     const storedUser  = localStorage.getItem('user');
     const storedToken = localStorage.getItem('token');
-    if (storedUser && storedToken) {
+    if (storedUser && storedToken && !user && !token) {
       setUser(JSON.parse(storedUser));
       setToken(storedToken);
     }

@@ -48,7 +48,8 @@
     font-weight: bold;
 }
 
-.filter-group select {
+.filter-group select,
+.month-input {
     padding: 8px 12px;
     border-radius: 5px;
     border: 1px solid #444;
@@ -57,6 +58,20 @@
     cursor: pointer;
     font-size: 15px;
     transition: 0.3s;
+}
+
+.month-input {
+    font-family: inherit;
+}
+
+.month-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.filter-group select:hover,
+.month-input:hover {
+    border-color: #fff;
 }
 
 .filter-group select:hover {
@@ -296,6 +311,162 @@
         color: #fff;
         border: 1px solid #444;
     }
+}
+
+/* ─── Modal de agendamento ─── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 480px;
+  width: 90%;
+  color: #e2e8f0;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header h3 {
+  color: #D4AF37;
+  font-size: 1.3rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
+
+.modal-body p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.modal-divider {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 16px 0;
+}
+
+.modal-body h4 {
+  color: #00c6ff;
+  margin-bottom: 12px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-field label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.modal-field select,
+.modal-field input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.modal-field select:focus,
+.modal-field input:focus {
+  border-color: #D4AF37;
+  outline: none;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-cancelar {
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-cancelar:hover {
+  opacity: 0.85;
+}
+
+.btn-concluir {
+  background: #2ECC71;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-concluir:hover {
+  opacity: 0.85;
+}
+
+.btn-salvar {
+  background: #D4AF37;
+  color: #0f0f0f;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-salvar:hover {
+  opacity: 0.85;
+}
+
+/* Date/time input styling */
+.modal-field input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
 }
 
 @media (max-width: 480px) {
