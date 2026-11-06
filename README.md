@@ -1,4 +1,4 @@
-# 💇‍♀️AGENDAÍ
+# 💇‍♀️SISTEMA GESTÃO NOVO
 
 > Sistema completo para gerenciamento de agendamentos, clientes e serviços para salões de beleza, integrado com automação via WhatsApp.
 
